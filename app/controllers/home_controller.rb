@@ -1,7 +1,4 @@
 class HomeController < ApplicationController
-  def index
-  end
-
   def turbo_frame_form
   end
 
