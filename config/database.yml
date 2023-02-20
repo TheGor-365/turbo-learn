@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  username: postgres
+  host: localhost
+  port: 5432
+
+development:
+  <<: *default
+  database: turbo_learn
+
+test:
+  <<: *default
+  database: turbo_learn_test
+
+production:
+  <<: *default
+  database: turbo_learn_pro
